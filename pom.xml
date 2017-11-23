@@ -8,7 +8,7 @@
   <name>CircleCI Maven Webapp</name>
   
   <properties>
-  	<testSuite>**/AllTests.class</testSuite>
+  	<testSuite>AllTests.java</testSuite>
   </properties>
   <dependencies>
     <dependency>
@@ -47,9 +47,11 @@
 	      </dependency>
 	    </dependencies>
 	    <configuration>
-	    	<includes>${testSuite}</includes>
+	    	<includes>
+	    		<include>${testSuite}</include>
+	    	</includes>
 	    </configuration>
-	  
+	  	
 	  </plugin>
 	  
 	  <plugin>
