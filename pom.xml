@@ -7,6 +7,9 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>CircleCI Maven Webapp</name>
   
+  <properties>
+  	<testSuite>**/AllTests.class</testSuite>
+  </properties>
   <dependencies>
     <dependency>
     	<groupId>junit</groupId>
@@ -43,6 +46,9 @@
 	        <version>2.20.1</version>
 	      </dependency>
 	    </dependencies>
+	    <configuration>
+	    	<includes>${testSuite}</includes>
+	    </configuration>
 	  </plugin>
     </plugins>
   </build>

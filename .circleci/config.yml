@@ -30,16 +30,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run:
-          name: Save test results 
-          command: |
-            mkdir -p ~/junit/ 
-            find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/junit/ \;
-          when: always
-      - store_test_results:
-          path: ~/junit
-      - store_artifacts:
-          path: ~/junit 
+      - run: mvn -U clean dependency:go-offline compile
 
       - save_cache:
           paths:
