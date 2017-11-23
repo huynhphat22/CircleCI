@@ -7,9 +7,6 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>CircleCI Maven Webapp</name>
   
-  <properties>
-  	<testSuite>AllTests.java</testSuite>
-  </properties>
   <dependencies>
     <dependency>
     	<groupId>junit</groupId>
@@ -22,15 +19,27 @@
     	<version>8.5.23</version>
     </dependency>
     <dependency>
-    	<groupId>tomcat</groupId>
-    	<artifactId>servlet</artifactId>
-    	<version>4.1.36</version>
-    </dependency>
-    <dependency>
     	<groupId>jstl</groupId>
     	<artifactId>jstl</artifactId>
     	<version>1.2</version>
     </dependency>
+    <dependency>
+    	<groupId>org.eclipse.equinox.http</groupId>
+    	<artifactId>servlet</artifactId>
+    	<version>1.0.0-v20070606</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.testng</groupId>
+    	<artifactId>testng</artifactId>
+    	<version>6.8</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+	<dependency>
+	    <groupId>com.relevantcodes</groupId>
+	    <artifactId>extentreports</artifactId>
+	    <version>2.41.2</version>
+	</dependency>
+	    
   </dependencies>
   <build>
     <finalName>CircleCI</finalName>
@@ -47,9 +56,9 @@
 	      </dependency>
 	    </dependencies>
 	    <configuration>
-	    	<includes>
-	    		<include>${testSuite}</include>
-	    	</includes>
+	    	<suiteXmlFiles>
+	    		testng.xml
+	    	</suiteXmlFiles>
 	    </configuration>
 	  	
 	  </plugin>

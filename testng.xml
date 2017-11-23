@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Add">
+    <classes>
+      <class name="test.AddTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="Divide">
+  	<classes>
+      <class name="test.DivideTest"/>
+    </classes>
+  </test>
+  
+  <test name="Exception">
+  	<classes>
+      <class name="test.ExceptionTest"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->

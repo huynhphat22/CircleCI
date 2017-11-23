@@ -1,10 +1,8 @@
 package test;
 
-import static org.junit.Assert.*;
-
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.math.BigDecimal;
-
-import org.junit.Test;
 
 import controller.MainServlet;
 
@@ -18,7 +16,7 @@ public class AddTest {
 	public void test() {
 		BigDecimal result = servlet.calculate(operand1, operand2, operator);
 		BigDecimal expected = new BigDecimal("156570325");
-		assertEquals(expected, result);
+		AssertJUnit.assertEquals(expected, result);
 
 	}
 
