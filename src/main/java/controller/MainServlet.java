@@ -60,7 +60,8 @@ public class MainServlet extends HttpServlet {
 		BigDecimal result = BigDecimal.ZERO;
 		switch (operator) {
 		case '+':
-			result = operand1.add(operand2);
+			//Broke things here
+			result = operand1.subtract(operand2);
 			break;
 		case '-':
 			result = operand1.subtract(operand2);
